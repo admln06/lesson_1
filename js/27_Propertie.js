@@ -17,7 +17,7 @@ const logg = "Hello, Israil!";
 console.log(logg.slice(7));
 
 console.log(logg.substring(7, 14));
-0
+
 
 const num = 12.2;
 console.log(Math.round(num));

@@ -1,26 +1,70 @@
 "use sctrict";
 
-let number = 4.6;
+// const box = document.getElementById('box');
+// console.log(box);
 
-console.log(-4/0);
-console.log('string' * 9);
+// const btns = document.getElementsByTagName('button');
+// console.log(btns[1]);
 
-const person = "Alex";
+// const circles = document.getElementsByClassName('circle');
+// console.log(circles);
 
-const bool = true;
+// const hearts = document.querySelectorAll('.heart');
+// hearts.forEach(item => {
+//     console.log(item);
+// })
 
-// console.log(something);
+// const oneHeart = document.querySelector('div');
+// console.log(oneHeart);
 
-let und;
-console.log(und);
+const box = document.getElementById('box'),
+      btns = document.getElementsByTagName('button'),
+      circles = document.getElementsByClassName('circle'),
+      wrapper = document.querySelector('.wrapper'),
+      hearts = wrapper.querySelectorAll('.heart'),
+      oneHeart = wrapper.querySelector('.heart');
+      
 
-const obj = {
-  name: "John",
-  age: 25,
-  isMarried: false
-};
+// box.style.backgroundColor = 'blue';
+// box.style.width = '500px';
 
-console.log(obj["name"]);
+box.style.cssText = `background-color: blue; width: 500px`;
 
-let arr = ['plum.png', 'orange.jpg', 6, 'apple.bmp', {}, []];
-console.log(arr[1]);
+btns[1].style.borderRadius = '100%';
+circles[0].style.backgroundColor = 'red';
+
+// for (let i = 0; i < hearts.length; i++) {
+//     hearts[i].style.backgroundColor = 'blue';
+// }
+
+hearts.forEach(item => {
+    item.style.backgroundColor = 'blue';
+});
+
+const div = document.createElement('div');
+// const text = document.createTextNode('Тут был я');
+
+div.classList.add('black');
+
+// document.body.append(div);
+// wrapper.appendChild(div);
+
+wrapper.append(div);
+// wrapper.prepend(div);
+
+// hearts[0].before(div);
+// hearts[0].after(div);
+
+// wrapper.insertBefore(div, hearts[1]);
+// wrapper.removeChild(hearts[1]);
+
+// circles[0].remove();
+
+// hearts[0].replaceWith(circles[0]);
+// wrapper.replaceChild(circles[0], hearts[0]);
+
+div.innerHTML = '<h1>Hello, brothers</h1>';
+
+// div.textContent = 'Hello';
+
+div.insertAdjacentHTML('beforebegin', '<h2>Hello</h2>')
